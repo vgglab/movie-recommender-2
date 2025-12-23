@@ -2,10 +2,11 @@ import streamlit as st
 import joblib
 import requests
 import time
+from sklearn.metrics.pairwise import cosine_similarity
 
-
-similarity = joblib.load('similarity.joblib')
+vectors = joblib.load('vectors.joblib')
 new_df = joblib.load('new_df.joblib')
+similarity = cosine_similarity(vectors)
 
 
 def recommender(movie_name: str):
