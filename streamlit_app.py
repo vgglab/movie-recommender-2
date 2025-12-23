@@ -40,7 +40,7 @@ def recommender(movie_name: str):
 
   return movies_list, posters_list
 
-st.title('Movie Recommender System')
+st.title('Movie Recommendation System')
 selected = st.selectbox('Select your favorite movie!', new_df['title'])
 
 if st.button('Recommend'):
@@ -49,7 +49,7 @@ if st.button('Recommend'):
     movies_list, posters_list = recommender(selected)
     stop_time = time.time()
     st.write('It took {} seconds!'.format(stop_time - start_time))
-    st.header('Your rainbow[friend] is best movie recommender system :) althought here is some result')
+    st.header('Your friend is best movie recommendation system :) althought here is some result')
     col1, col2, col3, col4, col5 = st.columns(5)
 
     with col1:
