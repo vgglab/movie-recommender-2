@@ -44,7 +44,6 @@ st.title('Movie Recommendation System')
 selected = st.selectbox('Select your favorite movie!', new_df['title'])
 
 if st.button('Recommend'):
-    st.balloons()
     start_time = time.time()
     movies_list, posters_list = recommender(selected)
     stop_time = time.time()
